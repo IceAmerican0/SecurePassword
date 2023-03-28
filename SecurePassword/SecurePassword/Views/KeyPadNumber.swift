@@ -8,23 +8,25 @@
 import SwiftUI
 
 struct KeyPadNumber: View {
-    var number: Number
+    var number: String
     
     var body: some View {
         Button(action: {
-            
+            NumberData().inputPassword?.append(number)
         }, label: {
-            Text(number.number)
-                .foregroundColor(.black)
+            Text(number)
+                .frame(width: 100, height: 100)
+                .background(.gray)
+                .foregroundColor(.white)
                 .bold()
-                .font(.largeTitle)
-                .frame(width: 50, height: 50, alignment: .center)
+                .font(.system(size: 50))
+                .cornerRadius(50)
         })
     }
 }
 
 struct KeyPadNumber_Previews: PreviewProvider {
     static var previews: some View {
-        KeyPadNumber(number: NumberData().numbers[0])
+        KeyPadNumber(number: NumberData().numbers[0][0])
     }
 }

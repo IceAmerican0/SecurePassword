@@ -9,9 +9,10 @@ import Foundation
 import Combine
 
 final class NumberData: ObservableObject {
-    @Published var numbers: [Number] = []
+    @Published var numbers: [[String]] = loadRandomNumber()
+    @Published var inputPassword: [String]?
 }
 
-func load() {
-    
+func loadRandomNumber() -> [[String]] {
+    return [["7","8","9"],["4","5","6"],["1","2","3"],["","0","<-"]]
 }
