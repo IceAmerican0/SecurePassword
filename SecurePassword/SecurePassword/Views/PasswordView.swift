@@ -8,16 +8,31 @@
 import SwiftUI
 
 struct PasswordView: View {
-    @State private var column = 0
     private let numberData = NumberData().numbers
-    
+    private let inputPassword = NumberData().inputPassword
     
     var body: some View {
         VStack {
             HStack {
-                ForEach(numberData, id: \.self) { line in
-                    ForEach(numberData, id: \.self) { row in
-//                        KeyPadNumber(row)
+                ForEach(inputPassword, id: \.self) { count in
+                    Image(systemName: "star.fill")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                }
+            }
+            
+            Spacer()
+                .frame(height: 100)
+            
+            ForEach(numberData, id: \.self) { line in
+                HStack {
+                    ForEach(line, id: \.self) { row in
+                        if (row == "") {
+                            Spacer()
+                                .frame(width: 106, height: 106)
+                        } else {
+                            KeyPadNumber(number: row)
+                        }
                     }
                 }
             }

@@ -12,7 +12,7 @@ struct KeyPadNumber: View {
     
     var body: some View {
         Button(action: {
-            NumberData().inputPassword?.append(number)
+            NumberData().inputPassword.append(number)
         }, label: {
             Text(number)
                 .frame(width: 100, height: 100)
