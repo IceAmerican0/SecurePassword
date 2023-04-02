@@ -13,19 +13,13 @@ final class NumberData: ObservableObject {
     @Published var inputPassword: [String] = ["","","",""]
 }
 
+// MARK: - 랜덤 키패드 숫자 생성
 func loadRandomNumber() -> [[String]] {
-    // [3][4] 키패드크기 초기화
+    // [4][3] 키패드크기 초기화
     var randomArray = Array(repeating: Array(repeating: "1", count: 3), count: 4)
-    var numbers: [String] = []
     var order = 0
     
-    while numbers.count < 10 {
-        let numberString = String(Int.random(in: 0...9))
-        
-        if numbers.contains(numberString) == false {
-            numbers.append(numberString)
-        }
-    }
+    let numbers = Array(0...9).shuffled().prefix(10).map { String($0) }
     
     for row in 0..<randomArray.count {
         for column in 0..<randomArray[row].count {

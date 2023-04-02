@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct PasswordView: View {
-    private let numberData = NumberData().numbers
-    private let inputPassword = NumberData().inputPassword
+    @EnvironmentObject var numberData: NumberData
     
     var body: some View {
         VStack {
             HStack {
-                ForEach(inputPassword, id: \.self) { count in
-                    Image(systemName: "star.fill")
+                ForEach(numberData.inputPassword, id: \.self) { count in
+                    Image(systemName: count == "" ? "star" : "star.fill")
                         .resizable()
                         .frame(width: 40, height: 40)
                 }
@@ -24,7 +23,7 @@ struct PasswordView: View {
             Spacer()
                 .frame(height: 100)
             
-            ForEach(numberData, id: \.self) { line in
+            ForEach(numberData.numbers, id: \.self) { line in
                 HStack {
                     ForEach(line, id: \.self) { row in
                         if (row == "") {
@@ -41,7 +40,10 @@ struct PasswordView: View {
 }
 
 struct PasswordView_Previews: PreviewProvider {
+    static let numberData = NumberData()
+    
     static var previews: some View {
         PasswordView()
+            .environmentObject(NumberData())
     }
 }
