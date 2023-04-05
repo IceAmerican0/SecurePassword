@@ -12,9 +12,7 @@
 		698071A729CB2679001F3351 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698071A629CB2679001F3351 /* Assets.xcassets */; };
 		698071AA29CB2679001F3351 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698071A929CB2679001F3351 /* Preview Assets.xcassets */; };
 		698071B129CB2C4E001F3351 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698071B029CB2C4E001F3351 /* PasswordView.swift */; };
-		698071B529CB2D87001F3351 /* KeyPadNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698071B429CB2D87001F3351 /* KeyPadNumber.swift */; };
 		698071BC29CB32A7001F3351 /* NumberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698071BB29CB32A7001F3351 /* NumberData.swift */; };
-		698071BE29CB37BC001F3351 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698071BD29CB37BC001F3351 /* Number.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,9 +22,7 @@
 		698071A629CB2679001F3351 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		698071A929CB2679001F3351 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		698071B029CB2C4E001F3351 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
-		698071B429CB2D87001F3351 /* KeyPadNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPadNumber.swift; sourceTree = "<group>"; };
 		698071BB29CB32A7001F3351 /* NumberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberData.swift; sourceTree = "<group>"; };
-		698071BD29CB37BC001F3351 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +77,6 @@
 			children = (
 				698071A429CB2678001F3351 /* ContentView.swift */,
 				698071B029CB2C4E001F3351 /* PasswordView.swift */,
-				698071B429CB2D87001F3351 /* KeyPadNumber.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -90,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				698071BB29CB32A7001F3351 /* NumberData.swift */,
-				698071BD29CB37BC001F3351 /* Number.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,9 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				698071B529CB2D87001F3351 /* KeyPadNumber.swift in Sources */,
 				698071A529CB2678001F3351 /* ContentView.swift in Sources */,
-				698071BE29CB37BC001F3351 /* Number.swift in Sources */,
 				698071B129CB2C4E001F3351 /* PasswordView.swift in Sources */,
 				698071A329CB2678001F3351 /* SecurePasswordApp.swift in Sources */,
 				698071BC29CB32A7001F3351 /* NumberData.swift in Sources */,

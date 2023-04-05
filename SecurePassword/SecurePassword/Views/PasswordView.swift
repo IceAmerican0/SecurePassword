@@ -30,12 +30,42 @@ struct PasswordView: View {
                             Spacer()
                                 .frame(width: 106, height: 106)
                         } else {
-                            KeyPadNumber(number: row)
+                            keyPadNumber(number: row)
                         }
                     }
                 }
             }
         }
+    }
+    
+    func keyPadNumber(number: String) -> some View {
+        Button(action: {
+            if (number == "<") {
+                if let lastIndex = numberData.inputPassword.lastIndex(where: { $0 != ""}) {
+                    numberData.inputPassword[lastIndex] = ""
+                } else { return }
+            } else {
+                if let firstIndex = numberData.inputPassword.firstIndex(of: "") {
+                    numberData.inputPassword[firstIndex] = number
+                    if firstIndex == 3 {
+                        let password = "1234"
+                        if password == numberData.inputPassword.joined() {
+                            
+                        } else {
+                            
+                        }
+                    }
+                }
+            }
+        }, label: {
+            Text(number)
+                .frame(width: 100, height: 100)
+                .background(.gray)
+                .foregroundColor(.white)
+                .bold()
+                .font(.system(size: 50))
+                .cornerRadius(50)
+        })
     }
 }
 
