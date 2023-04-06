@@ -4,4 +4,4 @@
 <img src="https://github.com/IceAmerican0/SecurePassword/blob/main/SecurePassword.png">
 
 
-Making SecurePassword Page with SwiftUI
+Making SecurePassword View with SwiftUI + FaceID
