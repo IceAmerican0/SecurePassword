@@ -9,19 +9,31 @@ import SwiftUI
 
 struct PasswordView: View {
     @EnvironmentObject var numberData: NumberData
+    @Binding var correctPassword: Bool
+    @State private var showAlert = false
+    @State private var errorCount = 0
     
     var body: some View {
         VStack {
+            if errorCount == 0 {
+                Text("비밀번호를 입력해주세요")
+            } else {
+                Text("비밀번호를 \(errorCount)회 잘못 입력했습니다")
+            }
+            
+            Spacer()
+                .frame(height: 20)
+            
             HStack {
                 ForEach(numberData.inputPassword, id: \.self) { count in
                     Image(systemName: count == "" ? "star" : "star.fill")
                         .resizable()
-                        .frame(width: 40, height: 40)
+                        .frame(width: 30, height: 30)
                 }
             }
             
             Spacer()
-                .frame(height: 100)
+                .frame(height: 70)
             
             ForEach(numberData.numbers, id: \.self) { line in
                 HStack {
@@ -50,9 +62,10 @@ struct PasswordView: View {
                     if firstIndex == 3 {
                         let password = "1234"
                         if password == numberData.inputPassword.joined() {
-                            
+                            correctPassword.toggle()
                         } else {
-                            
+                            errorCount += 1
+                            numberData.inputPassword = ["","","",""]
                         }
                     }
                 }
@@ -73,7 +86,7 @@ struct PasswordView_Previews: PreviewProvider {
     static let numberData = NumberData()
     
     static var previews: some View {
-        PasswordView()
+        PasswordView(correctPassword: .constant(false))
             .environmentObject(NumberData())
     }
 }

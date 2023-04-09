@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var correctPassword = false
+    
     var body: some View {
-        PasswordView()
+        if correctPassword {
+            HomeView()
+        } else {
+            PasswordView(correctPassword: $correctPassword)
+        }
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		697AD77429E278E800FAD155 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697AD77329E278E800FAD155 /* HomeView.swift */; };
 		698071A329CB2678001F3351 /* SecurePasswordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698071A229CB2678001F3351 /* SecurePasswordApp.swift */; };
 		698071A529CB2678001F3351 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698071A429CB2678001F3351 /* ContentView.swift */; };
 		698071A729CB2679001F3351 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698071A629CB2679001F3351 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		697AD77329E278E800FAD155 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6980719F29CB2678001F3351 /* SecurePassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecurePassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		698071A229CB2678001F3351 /* SecurePasswordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurePasswordApp.swift; sourceTree = "<group>"; };
 		698071A429CB2678001F3351 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				698071A429CB2678001F3351 /* ContentView.swift */,
 				698071B029CB2C4E001F3351 /* PasswordView.swift */,
+				697AD77329E278E800FAD155 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				698071A529CB2678001F3351 /* ContentView.swift in Sources */,
 				698071B129CB2C4E001F3351 /* PasswordView.swift in Sources */,
 				698071A329CB2678001F3351 /* SecurePasswordApp.swift in Sources */,
+				697AD77429E278E800FAD155 /* HomeView.swift in Sources */,
 				698071BC29CB32A7001F3351 /* NumberData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
